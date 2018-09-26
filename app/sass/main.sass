@@ -1,0 +1,314 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+		outline: none
+
+.img-r
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+.main-nav
+	background-color: #1C1C1C
+	padding: 20px 0
+	&__wrap
+		display: table
+	&__logo
+		width: 106px
+		float: left
+		margin-right: 20px
+	&__desc
+		display: table-cell
+		vertical-align: middle
+		font-family: $semi
+		color: $accent
+		font-size: 20px
+		span
+			font-family: $default-font
+			font-size: 16px
+			display: block
+	&__btn
+		float: right
+		display: table
+		padding-top: 40px
+		background-image: url(../img/mnu-btn.svg)
+		background-size: 40px 40px
+		background-position: top center
+		background-repeat: no-repeat
+		color: #fff
+
+.head
+	height: calc(100vh - 136px)
+	min-height: 650px
+	max-height: 1000px
+	position: relative
+	margin-bottom: 30px
+	&:before
+		content: ''
+		width: 91.66667%
+		height: 100%
+		float: right
+		background-image: url(../img/head1.jpg)
+		background-position: center center
+		background-size: cover
+		position: absolute
+		top: 0
+		right: 0
+	&:after
+		content: ''
+		width: 100%
+		height: 91.66667%
+		background-color: #1c1c1c
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+	&-ttl
+		font-family: $bold
+		font-size: 36px
+		line-height: 1.25
+		color: #333333
+		margin-top: 100px
+		span
+			display: block
+			font-size: 48px
+	&-quest
+		max-width: 480px
+		position: absolute
+		bottom: 8.33333%
+		right: 8.33333%
+		&__name
+			max-width: 360px
+			float: right
+			margin-bottom: 20px
+			font-family: $semi
+			font-size: 22px
+			line-height: 1
+			color: #fff
+		&__link
+			font-family: $semi
+			font-size: 35px
+			color: $accent
+			letter-spacing: .05em
+			position: relative
+			padding-bottom: 20px
+			&:after
+				content: ''
+				width: 270px
+				height: 1px
+				background-color: #F2F2F2
+				position: absolute
+				bottom: 0
+				right: 0
+
+.projects
+	padding: 30px 0
+	&-ttl
+		font-family: $semi
+		font-size: 30px
+		color: #333333
+		text-align: center
+		margin-bottom: 60px
+	&-item
+		position: relative
+		min-height: 270px
+		background-size: cover
+		background-position: center center
+		margin-bottom: 70px
+		&:hover .projects-item__link
+			opacity: 1
+		&.last
+			margin-bottom: 50px
+		&__link
+			opacity: 0
+			z-index: 2
+			transition: all ease .3s
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 270px
+			display: table
+			background-color: rgba(#000, .52)
+			span
+				display: table-cell
+				vertical-align: middle
+				font-family: $semi
+				font-size: 20px
+				color: #fff
+				text-align: center
+		&-info
+			position: absolute
+			left: 0
+			bottom: -50px
+			max-width: 230px
+			padding: 30px
+			background-color: #333333
+			&__ttl
+				font-size: 18px
+				color: #fff
+			&__code
+				margin-bottom: 10px
+				color: #fff
+			&__txt
+				font-family: $light
+				font-size: 14px
+				color: #fff
+	&-link
+		font-family: $semi
+		color: #1c1c1c
+		background-color: $accent
+		padding: 13px 0
+		display: block
+		max-width: 270px
+		text-align: center
+		border-radius: 26px
+		margin: 30px auto 0
+
+.objects
+	padding: 60px 0
+	margin: 30px 0
+	position: relative
+	&:before
+		content: ''
+		width: 60%
+		height: 100%
+		background-color: #242323
+		position: absolute
+		top: 0
+		right: 0
+	&-img
+		&__2
+			margin-top: 80px
+		&__3
+			margin-top: 20px
+		&__4
+			margin: 20px 0
+	&-ttl
+		font-family: $semi
+		font-size: 30px
+		letter-spacing: .05em
+		color: $accent
+		margin-bottom: 40px
+	&-txt
+		font-family: $modern
+		color: #fff
+	&-link
+		font-family: $semi
+		color: #1c1c1c
+		background-color: $accent
+		padding: 13px 0
+		display: block
+		max-width: 270px
+		text-align: center
+		border-radius: 26px
+		margin: 30px auto 0
+
+.special
+	padding: 60px 0
+	margin: 30px 0
+	position: relative
+	&:before
+		content: ''
+		width: 60%
+		height: 100%
+		background-image: url(../img/special-pattern.jpg)
+		background-position: center center
+		background-size: cover
+		position: absolute
+		top: 0
+		left: 0
+	&:after
+		content: ''
+		width: 70%
+		height: 80%
+		background-image: url(../img/special-img.jpg)
+		background-position: center center
+		background-size: cover
+		position: absolute
+		top: 10%
+		right: 0
+	&-ttl
+		font-size: 50px
+		line-height: 1
+		color: $accent
+		margin-bottom: 20px
+	&-info
+		padding: 40px 20px
+		background-color: #4F4F4F
+		margin-bottom: 20px
+		position: relative
+		z-index: 2
+		&__ttl
+			font-size: 30px
+			line-height: 1.25
+			color: #fff
+			position: relative
+			padding-bottom: 20px
+			margin-bottom: 40px
+			&:after
+				content: ''
+				width: 100px
+				height: 1px
+				background-color: #fff
+				position: absolute
+				bottom: 0
+				left: 0
+		&__txt
+			text-align: right
+			font-family: $modern
+			color: #F2F2F2
+			margin-bottom: 40px
+		&__link
+			font-family: $semi
+			color: #1c1c1c
+			background-color: $accent
+			padding: 13px 0
+			display: block
+			max-width: 270px
+			text-align: center
+			border-radius: 26px
+			margin: 30px auto 0
+	&-link
+		font-size: 25px
+		color: $accent
+
+
+@import "media" // Always at the end
